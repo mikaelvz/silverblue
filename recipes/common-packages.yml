@@ -1,9 +1,13 @@
 modules:
-  # Firefox
+  # Packages
   - type: rpm-ostree
+    install:
+      - gnome-tweaks
     remove:
       - firefox
       - firefox-langpacks
+
+  # Flatpaks
   - type: default-flatpaks
     notify: true
     install:
