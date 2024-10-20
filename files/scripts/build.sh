@@ -2,10 +2,6 @@
 
 set -ouex pipefail
 
-# Install SOF
-git clone https://github.com/WeirdTreeThing/chromebook-linux-audio /tmp/chromebook-linux-audio
-cp -r /tmp/chromebook-linux-audio/conf/sof/tplg/* /lib/firmware/intel/sof-tplg/
-
 # Install UCM configuration
 git clone https://github.com/WeirdTreeThing/chromebook-ucm-conf /tmp/chromebook-ucm-conf
 cp -r /tmp/chromebook-ucm-conf/cml/* /usr/share/alsa/ucm2/conf.d

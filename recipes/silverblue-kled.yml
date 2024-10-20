@@ -28,8 +28,16 @@ modules:
       - source: submodule/cros-keyboard-map/local-overrides.quirks
         destination: /etc/libinput/local-overrides.quirks
 
+  # Install SOF
+  - type: files
+    files:
+      - source: submodule/chromebook-linux-audio/conf/sof/tplg
+        destination: /lib/firmware/intel/sof-tplg/
+
+  # Build script
   - type: script
     scripts:
       - build.sh
 
+  # Signing image
   - type: signing
