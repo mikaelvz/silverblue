@@ -1,0 +1,5 @@
+# Universal Blue tools
+type: containerfile
+snippets:
+  - COPY --from=ghcr.io/ublue-os/config:latest /rpms /tmp/rpms
+  - RUN rpm-ostree install /tmp/rpms/ublue-os-update-services.noarch.rpm /tmp/rpms/ublue-os-just.noarch.rpm /tmp/rpms/ublue-os-luks.noarch.rpm

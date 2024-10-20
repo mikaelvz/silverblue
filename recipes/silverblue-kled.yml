@@ -6,5 +6,6 @@ image-version: 40
 
 modules:
   - from-file: ./common-packages.yml
+  - from-file: ./common-ublue-tools.yml
   - from-file: ./common-kled.yml
   - from-file: ./common-signing.yml
