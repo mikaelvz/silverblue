@@ -50,10 +50,15 @@ modules:
       - source: submodule/chromebook-ucm-conf/sof-cs42l42
         destination: /usr/share/alsa/ucm2/conf.d/sof-cs42l42/
 
-  # Build script
+  # Install ectool
   - type: script
-    scripts:
-      - build.sh
+    snippets:
+      - "curl -fL https://files.tree123.org/utils/x86_64/gnu/ectool -o /usr/bin/ectool"
+      - "chmod a+x /usr/bin/ectool"
+  - type: systemd
+    system:
+      enabled:
+        - ectool-fanspeed.service
 
   # Signing image
   - type: signing
