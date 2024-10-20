@@ -1,0 +1,17 @@
+name: silverblue-kled
+description: "This is a custom Universal Blue image for the Acer Chromebook Spin 713 (CP713-2W) Chromebook (board name: KLED)."
+
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: latest
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: script
+    scripts:
+      - build.sh
+
+  - type: signing
