@@ -4,3 +4,6 @@
 [submodule "files/submodule/chromebook-linux-audio"]
 	path = files/submodule/chromebook-linux-audio
 	url = git@github.com:WeirdTreeThing/chromebook-linux-audio.git
+[submodule "files/submodule/chromebook-ucm-conf"]
+	path = files/submodule/chromebook-ucm-conf
+	url = git@github.com:WeirdTreeThing/chromebook-ucm-conf.git
