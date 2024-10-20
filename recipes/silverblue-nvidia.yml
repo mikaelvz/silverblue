@@ -1,0 +1,16 @@
+name: silverblue-nvidia
+description: "This is a custom Silverblue image with Nvidia drivers from Universal Blue."
+
+base-image: quay.io/fedora-ostree-desktops/silverblue
+image-version: 40
+
+modules:
+  # Fedora
+  - type: containerfile
+    snippets:
+      - ARG FEDORA_VERSION=40
+
+  - from-file: ./common-packages.yml
+  - from-file: ./common-ublue-tools.yml
+  - from-file: ./common-nvidia.yml
+  - from-file: ./common-signing.yml
