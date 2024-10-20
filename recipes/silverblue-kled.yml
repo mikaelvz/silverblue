@@ -22,6 +22,12 @@ modules:
       enabled:
         - keyd.service
 
+  # Install keyboard configuration
+  - type: files
+    files:
+      - source: submodule/cros-keyboard-map/local-overrides.quirks
+        destination: /etc/libinput/local-overrides.quirks
+
   - type: script
     scripts:
       - build.sh

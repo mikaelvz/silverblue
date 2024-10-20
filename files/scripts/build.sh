@@ -2,11 +2,6 @@
 
 set -ouex pipefail
 
-# Install keyboard configuration
-git clone https://github.com/WeirdTreeThing/cros-keyboard-map /tmp/cros-keyboard-map
-mkdir -p /etc/libinput
-cp /tmp/cros-keyboard-map/local-overrides.quirks /etc/libinput/local-overrides.quirks
-
 # Install SOF
 git clone https://github.com/WeirdTreeThing/chromebook-linux-audio /tmp/chromebook-linux-audio
 cp -r /tmp/chromebook-linux-audio/conf/sof/tplg/* /lib/firmware/intel/sof-tplg/
