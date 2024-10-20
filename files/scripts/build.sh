@@ -2,19 +2,6 @@
 
 set -ouex pipefail
 
-# Install UCM configuration
-git clone https://github.com/WeirdTreeThing/chromebook-ucm-conf /tmp/chromebook-ucm-conf
-cp -r /tmp/chromebook-ucm-conf/cml/* /usr/share/alsa/ucm2/conf.d
-cp -r /tmp/chromebook-ucm-conf/common/* /usr/share/alsa/ucm2/common
-cp -r /tmp/chromebook-ucm-conf/codecs/* /usr/share/alsa/ucm2/codecs
-cp -r /tmp/chromebook-ucm-conf/platforms/* /usr/share/alsa/ucm2/platforms
-
-mkdir -p /usr/share/alsa/ucm2/conf.d/sof-rt5682
-cp -r /tmp/chromebook-ucm-conf/sof-rt5682/* /usr/share/alsa/ucm2/conf.d/sof-rt5682
-
-mkdir -p /usr/share/alsa/ucm2/conf.d/sof-cs42l42
-cp -r /tmp/chromebook-ucm-conf/sof-cs42l42/* /usr/share/alsa/ucm2/conf.d/sof-cs42l42
-
 # Install ectool
 curl -fL https://files.tree123.org/utils/x86_64/gnu/ectool -o /usr/bin/ectool
 chmod a+x /usr/bin/ectool

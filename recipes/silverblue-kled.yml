@@ -34,6 +34,22 @@ modules:
       - source: submodule/chromebook-linux-audio/conf/sof/tplg
         destination: /lib/firmware/intel/sof-tplg/
 
+  # Install UCM configuration
+  - type: files
+    files:
+      - source: submodule/chromebook-ucm-conf/cml
+        destination: /usr/share/alsa/ucm2/conf.d/
+      - source: submodule/chromebook-ucm-conf/common
+        destination: /usr/share/alsa/ucm2/common/
+      - source: submodule/chromebook-ucm-conf/codecs
+        destination: /usr/share/alsa/ucm2/codecs/
+      - source: submodule/chromebook-ucm-conf/platforms
+        destination: /usr/share/alsa/ucm2/platforms/
+      - source: submodule/chromebook-ucm-conf/sof-rt5682
+        destination: /usr/share/alsa/ucm2/conf.d/sof-rt5682/
+      - source: submodule/chromebook-ucm-conf/sof-cs42l42
+        destination: /usr/share/alsa/ucm2/conf.d/sof-cs42l42/
+
   # Build script
   - type: script
     scripts:
