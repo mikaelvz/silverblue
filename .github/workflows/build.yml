@@ -23,6 +23,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - silverblue-kled.yml
+          - silverblue-nvidia.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
