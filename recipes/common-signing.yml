@@ -1,0 +1,3 @@
+modules:
+  # Signing image
+  - type: signing
