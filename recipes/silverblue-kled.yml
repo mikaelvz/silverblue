@@ -5,10 +5,22 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest
 
 modules:
+  # Files
   - type: files
     files:
       - source: system
         destination: /
+
+  # Install keyd
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/alternateved/keyd/repo/fedora-%OS_VERSION%/alternateved-keyd-fedora-%OS_VERSION%.repo
+    install:
+      - keyd
+  - type: systemd
+    system:
+      enabled:
+        - keyd.service
 
   - type: script
     scripts:
