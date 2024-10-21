@@ -1,4 +1,4 @@
-name: silverblue-kled
+name: silverblue-kled-recipe
 description: "This is a custom Silverblue image for the Acer Chromebook Spin 713 (CP713-2W) Chromebook (board name: KLED)."
 
 base-image: quay.io/fedora-ostree-desktops/silverblue
