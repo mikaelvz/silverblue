@@ -5,5 +5,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest
 
 modules:
+  - from-file: common/cleanup.yml
+
   # Signing
   - type: signing
