@@ -1,0 +1,13 @@
+name: silverblue-nvidia
+description: "Custom Universal Blue silverblue-nvidia image."
+
+base-image: ghcr.io/ublue-os/silverblue-nvidia
+image-version: latest
+
+modules:
+  - from-file: common/packages.yml
+  - from-file: common/cleanup-nvidia.yml
+  - from-file: common/cleanup.yml
+
+  # Signing
+  - type: signing
