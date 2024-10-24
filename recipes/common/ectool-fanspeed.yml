@@ -1,0 +1,18 @@
+modules:
+  # Download ectool
+  - type: script
+    snippets:
+      - "curl -fL https://files.tree123.org/utils/x86_64/gnu/ectool -o /usr/bin/ectool"
+      - "chmod +x /usr/bin/ectool"
+
+  # Install fanspeed scripts and example configuration
+  - type: files
+    files:
+      - source: system/ectool
+        destination: /
+
+  # Enable systemd service
+  - type: systemd
+    system:
+      enabled:
+        - ectool-fanspeed.service
