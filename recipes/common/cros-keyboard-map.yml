@@ -1,0 +1,27 @@
+modules:
+  # Install keyd
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/alternateved/keyd/repo/fedora-%OS_VERSION%/alternateved-keyd-fedora-%OS_VERSION%.repo
+    install:
+      - keyd
+  - type: script
+    snippets:
+      - "rm /etc/yum.repos.d/alternateved-keyd-fedora-40.repo"
+
+  # Enable keyd
+  - type: systemd
+    system:
+      enabled:
+        - keyd.service
+
+  # Configure keyd
+  - type: files
+    files:
+      - source: system/keyd
+        destination: /
+  - type: script
+    snippets:
+      - "git clone https://github.com/WeirdTreeThing/cros-keyboard-map /tmp/cros-keyboard-map"
+      - "mkdir -p /etc/libinput"
+      - "cp /tmp/cros-keyboard-map/local-overrides.quirks /etc/libinput/local-overrides.quirks"
