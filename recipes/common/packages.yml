@@ -15,3 +15,11 @@ modules:
     system:
       install:
         - org.mozilla.firefox
+
+  # Replace terminal
+  - type: rpm-ostree
+    remove:
+      - gnome-terminal
+      - gnome-terminal-nautilus
+    install:
+      - ptyxis
