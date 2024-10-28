@@ -5,11 +5,9 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest
 
 modules:
-  - from-file: common/packages.yml
   - from-file: common/chromebook-linux-audio.yml
   - from-file: common/cros-keyboard-map.yml
   - from-file: common/ectool-fanspeed.yml
-  - from-file: common/cleanup.yml
 
   # Signing
   - type: signing

@@ -1,7 +1,0 @@
-modules:
-  - type: "script"
-    snippets:
-      # Remove repositories
-      - "rm /etc/yum.repos.d/_copr_ublue-os-akmods.repo"
-      - "rm /etc/yum.repos.d/negativo17-fedora-multimedia.repo"
-      - "ls -al /etc/yum.repos.d"
