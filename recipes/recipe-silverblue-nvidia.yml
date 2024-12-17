@@ -1,0 +1,9 @@
+name: silverblue-kled
+description: "Custom Universal Blue silverblue-nvidia image."
+
+base-image: ghcr.io/ublue-os/silverblue-nvidia
+image-version: latest
+
+modules:
+  # Signing
+  - type: signing
