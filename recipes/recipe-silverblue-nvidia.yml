@@ -1,4 +1,4 @@
-name: silverblue-kled
+name: silverblue-nvidia
 description: "Custom Universal Blue silverblue-nvidia image."
 
 base-image: ghcr.io/ublue-os/silverblue-nvidia
