@@ -7,7 +7,7 @@ modules:
       - keyd
   - type: script
     snippets:
-      - "rm /etc/yum.repos.d/alternateved-keyd-fedora-40.repo"
+      - "rm /etc/yum.repos.d/alternateved-keyd-fedora-41.repo"
 
   # Enable keyd
   - type: systemd
