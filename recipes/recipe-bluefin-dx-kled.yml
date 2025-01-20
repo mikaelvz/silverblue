@@ -1,0 +1,13 @@
+name: bluefin-dx-kled
+description: "Custom Universal Blue bluefin-dx image for Acer Chromebook Spin 713 (CP713-2W) (Board Name: KLED)."
+
+base-image: ghcr.io/ublue-os/bluefin-dx
+image-version: stable
+
+modules:
+  - from-file: common/chromebook-linux-audio.yml
+  - from-file: common/cros-keyboard-map.yml
+  - from-file: common/ectool-fanspeed.yml
+
+  # Signing
+  - type: signing

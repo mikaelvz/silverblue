@@ -23,7 +23,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - recipe-silverblue-kled.yml
-          - recipe-silverblue-nvidia.yml
+          - recipe-bluefin-dx-kled.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
