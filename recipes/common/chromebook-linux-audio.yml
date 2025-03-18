@@ -1,5 +1,5 @@
 modules:
   - type: script
     snippets:
-      - "git clone https://github.com/WeirdTreeThing/chromebook-linux-audio /tmp/chromebook-linux-audio"
-      - "cd /tmp/chromebook-linux-audio && ./setup-audio -b kled"
+      - "git clone https://github.com/mikaelvz/chromebook-linux-audio.git /tmp/chromebook-linux-audio"
+      - "cd /tmp/chromebook-linux-audio && ./setup-audio --platform cml"
